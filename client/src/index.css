@@ -1,0 +1,384 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  min-height: 100%;
+  padding: 0;
+  background: rgb(27, 85, 140);
+  color: white;
+  font-family: Lato, sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+#nearby-weather {
+  text-align: center;
+}
+
+.weatherIcon {
+  float: right;
+  font-size: 0.5em;
+  height: 20px;
+  margin-left: 10%;
+  margin-top: -5%;
+  width: 50px;
+}
+
+p {
+  font-size: 1.3em;
+}
+
+button,
+input {
+  outline: none;
+}
+
+button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 50px;
+  margin: 10px 0 0;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+
+.city-weather-input {
+  display: inline-block;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(155, 29, 29);
+  
+}
+
+.table {
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 3em;
+  color: tomato;
+  text-shadow: 1px 1px 2px #000, -1px 1px 2px #000;
+}
+
+h3,
+label[for='new-task'] {
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid #333;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+input[type="text"] {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 18px;
+  height: 25px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+
+input[type="text"]:focus {
+  color: #333;
+}
+
+label[for='new-task'] {
+  display: block;
+  margin: 0 0 20px;
+}
+
+
+.containers {
+  display: block;
+  width: 90vw;
+  height: 60vh;
+  margin: 30px auto 0;
+  padding: 0 20px 60px;
+  background-color: rgba(26, 25, 24, 0.94);
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: -2px 2px 2px #222, 2px 2px 2px #222;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+#nearbyDataButton {
+  border-style: solid;
+}
+
+#nearbyDataButton:hover {
+  background-color: lightblue;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.temp-span {
+  visibility: visible;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+/* .globe-div {
+  max-height: 1000px;
+  max-width: 500;
+  float: left;
+} */
+
+.Registration,
+.Login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fields {
+  margin: 10px;
+}
+
+.buttons button {
+  margin: 10px;
+}
+
+.message {
+  padding: 5px;
+}
+
+.error {
+  border: solid #ec5555 2px;
+}
+
+/* MAIN NAV -------- */
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #3b80d1;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  margin: 2.3em 0 2em 0;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.container {
+  width: 95%;
+  max-width: 780px;
+  padding-bottom: 2em;
+  margin: 0 auto 2em;
+  background: #fff;
+  border-radius: .5em;
+  box-shadow: 0 3px rgba(0, 0, 0, .1);
+  overflow: hidden;
+}
+
+  header,
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.main-nav a {
+  font-size: .95em;
+  color: #222;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  padding: 1em;
+  transition: .2s;
+}
+
+.main-nav a:hover,
+.main-nav .active {
+  color: #fff;
+  background: #3b80d1;
+}
+
+/******Error Route********/
+.icn-error {
+  font-size: 3.2em;
+  margin-bottom: .25em;
+}
+
+.not-found {
+  text-align: center;
+}
+/* .container{
+  position: relative;
+
+} */
+
+/* .container canvas, .card-div {
+  position: absolute;
+} */
+
+/*  */
+.sidenav {
+  height: 100%;
+  width: 0.1%;
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+
+}
+
+.sidenav:hover {
+  width: 15%;
+
+}
+
+.sidenav-welcome {
+  color: #ec5555;
+  font-size: small;
+  padding-left: 10%;
+  
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: aliceblue;
+  display: block;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 36px;
+}
+
+#root {
+  transition: margin-left .5s;
+  position: relative;
+  z-index: 1;
+}
+
+.menu {
+  z-index: 5;
+  position: absolute;
+  color: #3b80d1;
+}
+
+.card-div {
+  background-color: white;
+  position: absolute;
+  z-index: 10;
+  top: 4em;
+  right: 3em;
+  visibility: visible;
+  height: 80vh;
+  overflow-y: scroll;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.iframe-div {
+  width: 50rem;
+  height: 80vh;
+  top: 4em;
+  left: 3rem;
+  position: absolute;
+  visibility: visible;
+  overflow: hidden;
+  z-index: 10;
+  background-color: white;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+ /* Twitter styling */
+.twitter-div {
+  background-color: white;
+  position: absolute;
+  z-index: 10;
+  top: 4em;
+  left: 3rem;
+  visibility: visible;
+  height: 80vh;
+  overflow: hidden;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+
+.div-btn-hourly {
+  text-align: center;
+  padding-left: 100px;
+}
+@media screen and (min-width: 420px) {}
+
+@media screen and (min-width: 800px) {}
+
+@supports (display: grid) {}

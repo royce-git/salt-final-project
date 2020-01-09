@@ -1,0 +1,43 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "description": "* Create and setup an express server with 2 endpoints, one with /nearby and one with /search *",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha .",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Obaid & Royce",
+  "license": "",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "eslint": "5.12.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-mocha": "5.2.0",
+    "express": "^4.17.1",
+    "mocha": "^6.2.0",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^1.19.4",
+    "supertest": "^4.0.2",
+    "cors": "^2.8.5"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "basic-auth": "^2.0.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "mongodb": "^3.3.4",
+    "mongoose": "^5.7.12",
+    "express-validator": "^5.3.0",
+    "morgan": "^1.9.1"
+  }
+}
